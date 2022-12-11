@@ -45,8 +45,9 @@ app.post('/api/notes', (req, res) => {
               `New note has been added to the database.`
           )
         );
+        res.json();
     });
-});
+  });
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/index.html'));
